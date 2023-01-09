@@ -111,7 +111,6 @@ __weak int arch_cpu_init(void)
 void board_init_f(ulong dummy)
 {
 	int ret;
-
 #ifdef CONFIG_DEBUG_UART
 	/*
 	 * Debug UART can be used from here if required:
@@ -122,6 +121,7 @@ void board_init_f(ulong dummy)
 	 * printascii("string");
 	 */
 	debug_uart_init();
+    printascii("ALEX HELLO!");
 	debug("\nspl:debug uart enabled in %s\n", __func__);
 #endif
 
