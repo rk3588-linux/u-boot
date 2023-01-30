@@ -53,4 +53,3 @@
 	mmc-hs200-1_8v;
 	status = "okay";
 };
-

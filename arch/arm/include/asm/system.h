@@ -83,7 +83,10 @@
 #define HCR_EL2_RW_AARCH32	(0 << 31) /* Lower levels are AArch32         */
 #define HCR_EL2_HCD_DIS		(1 << 29) /* Hypervisor Call disabled         */
 #define HCR_EL2_AMO_EL2		(1 <<  5) /* Route SErrors to EL2             */
-
+#define HCR_EL2_AMO		(1 << 5)  /* Asynchronous External Abort and SError Interrupt routing */
+#define HCR_EL2_IMO		(1 << 4)  /* Physical IRQ Routing */
+#define HCR_EL2_FMO		(1 << 3)  /* Physical FIQ Routing */
+#define HCR_EL2_TGE     (1 << 27) /* Trap General Exceptions          */
 /*
  * ID_AA64ISAR1_EL1 bits definitions
  */
