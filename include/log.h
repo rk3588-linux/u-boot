@@ -228,11 +228,9 @@ int _log_buffer(enum log_category_t cat, enum log_level_t level,
 	})
 #endif
 
-#ifdef DEBUG
+
 #define _DEBUG	1
-#else
-#define _DEBUG	0
-#endif
+
 
 #ifdef CONFIG_SPL_BUILD
 #define _SPL_BUILD	1

@@ -1,0 +1,23 @@
+if ROCKCHIP_RK3588
+
+config TARGET_EVB_RK3588
+	bool "RK3588 evaluation board"
+	select BOARD_LATE_INIT
+	help
+	  RK3588 EVB is a evaluation board for Rockchp RK3588.
+
+config ROCKCHIP_BOOT_MODE_REG
+	default 0xfd588080
+
+config ROCKCHIP_STIMER_BASE
+	default 0xfd8c8000
+
+config SYS_SOC
+	default "rk3588"
+
+config SYS_MALLOC_F_LEN
+	default 0x2000
+
+source "board/rockchip/evb_rk3588/Kconfig"
+
+endif

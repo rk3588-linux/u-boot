@@ -77,6 +77,7 @@ int dram_init_banksize(void)
 
 size_t rockchip_sdram_size(phys_addr_t reg)
 {
+    printf("ALEX rockchip_sdram_size\n");
 	u32 rank, cs0_col, bk, cs0_row, cs1_row, bw, row_3_4;
 	size_t chipsize_mb = 0;
 	size_t size_mb = 0;
