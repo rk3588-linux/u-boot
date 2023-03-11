@@ -22,6 +22,7 @@
 
     aliases {
         serial0 = &uart2;
+        mmc0 = &sdmmc;
     };
 
     chosen {
@@ -311,8 +312,10 @@
         max-frequency = <200000000>;
         pinctrl-names = "default";
         pinctrl-0 = <&sdmmc_clk &sdmmc_cmd &sdmmc_det &sdmmc_bus4>;
-        u-boot,dm-spl;
-        status = "disabled";
+        u-boot,dm-pre-reloc;
+        bus-width = <4>;
+        //cd-gpios = <&gpio0 RK_PA4 GPIO_ACTIVE_HIGH>;
+        status = "okay";
     };
 
     pinctrl: pinctrl {
